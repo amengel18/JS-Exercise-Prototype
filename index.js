@@ -86,6 +86,17 @@ Car.prototype.fill = function (gallons){
   return (this.tank = this.tank + gallons)
 }
 
+Car.prototype.drive = function (distance){ 
+  return (this.odometer = this.odometer + distance);
+
+  let milesPerGallon = function (miles){
+    return  this.odometer / this.tank 
+  };
+
+
+}
+
+
 /*
   TASK 3
     - Write a Baby constructor subclassing Person.
@@ -109,10 +120,10 @@ Baby.prototype.play = function (){
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. Window binding: global scope, no declared object
+  2. Implicit binding: declared object
+  3. 'new' binding: binding to 'new' operator with constructors
+  4. Explicit binding: use the .call() or .apply() to refer to specific objects
 */
 
 
